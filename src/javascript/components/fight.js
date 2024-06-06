@@ -7,7 +7,6 @@ export async function fight(firstFighterHealth, secondFighterHealth, firstFighte
     return new Promise(resolve => {
         const healthBarfirstFighter = document.getElementById('left-fighter-indicator');
         const healthBarsecondFighter = document.getElementById('right-fighter-indicator');
-        console.log('Health bars:', healthBarfirstFighter, healthBarsecondFighter);
 
         const allDownKeys = new Set();
         let isCriticalFirstReady = true;
@@ -121,9 +120,6 @@ export async function fight(firstFighterHealth, secondFighterHealth, firstFighte
 
         document.body.addEventListener('keydown', handleKeyDown);
         document.body.addEventListener('keyup', handleKeyUp);
-
-        // Debugging logs
-        console.log('Event listeners attached');
     });
 }
 
